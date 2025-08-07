@@ -316,12 +316,281 @@ const MesheryDesignEmbedExtension = () => {
   );
 };
 
+const LensExtensionLogo = () => {
+  return (
+    <img
+      style={{
+        paddingRight: '1rem',
+        height: 'auto',
+        width: 'auto',
+        maxWidth: '120px',
+        maxHeight: '75px',
+      }}
+      src="/static/img/kubernetes.svg"
+    />
+  );
+};
+
+const MesheryLensExtension = () => {
+  const handleGetExtension = (e) => {
+    window.open('https://github.com/kubeshark/lens', '_blank');
+    e.stopPropagation();
+  };
+
+  return (
+    <>
+      <Grid2 size={LARGE_6_MED_12_GRID_STYLE}>
+        <CardContainer>
+          <Typography variant="h5" component="div">
+            Lens/K8s Lens Extension
+          </Typography>
+
+          <FrontSideDescription variant="body">
+            <LensExtensionLogo />
+            View real-time traffic of clusters, namespaces, nodes, pods or services directly from
+            Lens IDE. The Kubeshark's Lens extension enables seamless integration for network
+            traffic analysis and monitoring.
+          </FrontSideDescription>
+          {
+            <div style={{ textAlign: 'right' }}>
+              <Button
+                variant="contained"
+                color="primary"
+                data-testid="lens-extension-get-btn"
+                onClick={(e) => handleGetExtension(e)}
+              >
+                Get Extension
+              </Button>
+            </div>
+          }
+        </CardContainer>
+      </Grid2>
+    </>
+  );
+};
+
+const KubectlMeshSyncLogo = () => {
+  return (
+    <img
+      style={{
+        paddingRight: '1rem',
+        height: 'auto',
+        width: 'auto',
+        maxWidth: '120px',
+        maxHeight: '75px',
+      }}
+      src="/static/img/meshsync.svg"
+    />
+  );
+};
+
+const MesheryKubectlMeshSyncExtension = () => {
+  const handleInstall = (e) => {
+    window.open('https://docs.meshery.io/extensions/kubectl-meshsync-snapshot', '_blank');
+    e.stopPropagation();
+  };
+
+  return (
+    <>
+      <Grid2 size={LARGE_6_MED_12_GRID_STYLE}>
+        <CardContainer>
+          <Typography variant="h5" component="div">
+            kubectl MeshSync Snapshot
+          </Typography>
+
+          <FrontSideDescription variant="body">
+            <KubectlMeshSyncLogo />
+            A native kubectl plugin for conveniently synchronizing the state of your cluster with
+            Meshery Server. Capture snapshots and maintain infrastructure state consistency.
+          </FrontSideDescription>
+          {
+            <div style={{ textAlign: 'right' }}>
+              <Button
+                variant="contained"
+                color="primary"
+                data-testid="kubectl-meshsync-install-btn"
+                onClick={(e) => handleInstall(e)}
+              >
+                Install Plugin
+              </Button>
+            </div>
+          }
+        </CardContainer>
+      </Grid2>
+    </>
+  );
+};
+
+const VSCodeExtensionLogo = () => {
+  return (
+    <img
+      style={{
+        paddingRight: '1rem',
+        height: 'auto',
+        width: 'auto',
+        maxWidth: '120px',
+        maxHeight: '75px',
+      }}
+      src="/static/img/vscode.svg"
+    />
+  );
+};
+
+const MesheryVSCodeExtension = () => {
+  const handleGetExtension = (e) => {
+    window.open('https://marketplace.visualstudio.com/items?itemName=layer5.meshery-vscode', '_blank');
+    e.stopPropagation();
+  };
+
+  return (
+    <>
+      <Grid2 size={LARGE_6_MED_12_GRID_STYLE}>
+        <CardContainer>
+          <Typography variant="h5" component="div">
+            Meshery VS Code Extension
+          </Typography>
+
+          <FrontSideDescription variant="body">
+            <VSCodeExtensionLogo />
+            Develop cloud native infrastructure and applications from VS Code. Access Meshery's
+            design patterns, validate configurations, and manage your infrastructure directly
+            from your editor.
+          </FrontSideDescription>
+          {
+            <div style={{ textAlign: 'right' }}>
+              <Button
+                variant="contained"
+                color="primary"
+                data-testid="vscode-extension-get-btn"
+                onClick={(e) => handleGetExtension(e)}
+              >
+                Get Extension
+              </Button>
+            </div>
+          }
+        </CardContainer>
+      </Grid2>
+    </>
+  );
+};
+
+const MesheryCliLogo = () => {
+  return (
+    <img
+      style={{
+        paddingRight: '1rem',
+        height: 'auto',
+        width: 'auto',
+        maxWidth: '120px',
+        maxHeight: '75px',
+      }}
+      src="/static/img/mesheryctl.svg"
+    />
+  );
+};
+
+const MesheryCliExtension = () => {
+  const handleInstall = (e) => {
+    window.open('https://docs.meshery.io/installation', '_blank');
+    e.stopPropagation();
+  };
+
+  return (
+    <>
+      <Grid2 size={LARGE_6_MED_12_GRID_STYLE}>
+        <CardContainer>
+          <Typography variant="h5" component="div">
+            Meshery CLI (mesheryctl)
+          </Typography>
+
+          <FrontSideDescription variant="body">
+            <MesheryCliLogo />
+            Command line interface for Meshery, the cloud native management plane. Manage
+            infrastructure lifecycle, performance benchmarking, and GitOps workflows from your
+            terminal.
+          </FrontSideDescription>
+          {
+            <div style={{ textAlign: 'right' }}>
+              <Button
+                variant="contained"
+                color="primary"
+                data-testid="meshery-cli-install-btn"
+                onClick={(e) => handleInstall(e)}
+              >
+                Install CLI
+              </Button>
+            </div>
+          }
+        </CardContainer>
+      </Grid2>
+    </>
+  );
+};
+
+const NighthawkExtensionLogo = () => {
+  return (
+    <img
+      style={{
+        paddingRight: '1rem',
+        height: 'auto',
+        width: 'auto',
+        maxWidth: '120px',
+        maxHeight: '75px',
+      }}
+      src="/static/img/nighthawk.svg"
+    />
+  );
+};
+
+const MesheryNighthawkExtension = () => {
+  const handleLearnMore = (e) => {
+    window.open('https://github.com/meshery-extensions/meshery-nighthawk', '_blank');
+    e.stopPropagation();
+  };
+
+  return (
+    <>
+      <Grid2 size={LARGE_6_MED_12_GRID_STYLE}>
+        <CardContainer>
+          <Typography variant="h5" component="div">
+            Meshery Nighthawk Extension
+          </Typography>
+
+          <FrontSideDescription variant="body">
+            <NighthawkExtensionLogo />
+            Modern performance characterization tool for cloud native infrastructure. Nighthawk
+            provides advanced load testing capabilities with detailed metrics and analysis for
+            service mesh and microservices.
+          </FrontSideDescription>
+          {
+            <div style={{ textAlign: 'right' }}>
+              <Button
+                variant="contained"
+                color="primary"
+                data-testid="nighthawk-extension-learn-more-btn"
+                onClick={(e) => handleLearnMore(e)}
+              >
+                Learn More
+              </Button>
+            </div>
+          }
+        </CardContainer>
+      </Grid2>
+    </>
+  );
+};
+
 export const WrappedMeshMapSignupCard = MeshMapSignUpcard;
 export const WrappedMeshMapSnapShopCard = MeshMapSnapShotCard;
 export const WrappedMesheryPerformanceAction = MesheryPerformanceAction;
 export const WrappedMesheryDockerExtension = MesheryDockerExtension;
 export const WrappedMesheryEmbedDesignExtension = MesheryDesignEmbedExtension;
 export const WrappedMesheryHelmKanvasExtension = MesheryHelmKanvasExtension;
+export const WrappedMesheryLensExtension = MesheryLensExtension;
+export const WrappedMesheryKubectlMeshSyncExtension = MesheryKubectlMeshSyncExtension;
+export const WrappedMesheryVSCodeExtension = MesheryVSCodeExtension;
+export const WrappedMesheryCliExtension = MesheryCliExtension;
+export const WrappedMesheryNighthawkExtension = MesheryNighthawkExtension;
 
 const Extensions = () => {
   const [catalogContent, setCatalogContent] = useState(true);
@@ -402,6 +671,11 @@ const Extensions = () => {
             <WrappedMesheryHelmKanvasExtension />
             <WrappedMesheryDockerExtension />
             <WrappedMesheryEmbedDesignExtension />
+            <WrappedMesheryLensExtension />
+            <WrappedMesheryKubectlMeshSyncExtension />
+            <WrappedMesheryVSCodeExtension />
+            <WrappedMesheryCliExtension />
+            <WrappedMesheryNighthawkExtension />
             <Grid2 size={LARGE_6_MED_12_GRID_STYLE}>
               <CardContainer>
                 <Typography data-testid="catalog-section-heading" variant="h5" component="div">
